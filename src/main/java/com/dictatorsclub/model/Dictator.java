@@ -1,5 +1,6 @@
 package com.dictatorsclub.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -33,6 +34,7 @@ public class Dictator {
     private LocalDateTime updatedAt;
     
     @OneToMany(mappedBy = "dictator", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Achievement> achievements;
     
     // Constructors

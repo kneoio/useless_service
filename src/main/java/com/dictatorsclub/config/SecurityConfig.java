@@ -25,6 +25,9 @@ public class SecurityConfig {
                 .requestMatchers("/h2-console/**").permitAll()
                 .requestMatchers("/api/dictators").permitAll() // GET all dictators - public read
                 .requestMatchers("/api/dictators/*/achievements").permitAll() // GET achievements - public read
+                .requestMatchers("/api/achievements").permitAll() // GET all achievements - public read
+                .requestMatchers("/api/dictators/*").permitAll() // GET specific dictator - public read
+                .requestMatchers("/api/init/**").permitAll() // Data initialization endpoints
                 .anyRequest().authenticated()
             )
             .headers(headers -> headers.frameOptions().disable()) // For H2 console

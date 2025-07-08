@@ -1,5 +1,6 @@
 package com.dictatorsclub.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -27,6 +28,7 @@ public class Achievement {
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dictator_id", nullable = false)
+    @JsonBackReference
     private Dictator dictator;
     
     // Constructors
