@@ -1,0 +1,11 @@
+com\dictatorsclub\model\Dictator.class
+com\dictatorsclub\config\SecurityConfig.class
+com\dictatorsclub\controller\DictatorController.class
+com\dictatorsclub\repository\DictatorRepository.class
+com\dictatorsclub\service\AchievementService.class
+com\dictatorsclub\service\DictatorService.class
+com\dictatorsclub\repository\AchievementRepository.class
+com\dictatorsclub\config\DataInitializer.class
+com\dictatorsclub\controller\AchievementController.class
+com\dictatorsclub\model\Achievement.class
+com\dictatorsclub\DictatorsClubApplication.class

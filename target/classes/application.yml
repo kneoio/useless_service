@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:dictatorsdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Configure this to point to your Keycloak server
+          # Example: http://localhost:8080/realms/your-realm
+          issuer-uri: ${OIDC_ISSUER_URI:http://localhost:8080/realms/dictators-realm}
+          
+server:
+  port: 8081
+
+logging:
+  level:
+    com.dictatorsclub: DEBUG
+    org.springframework.security: DEBUG
